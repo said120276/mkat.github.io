@@ -4183,9 +4183,9 @@ p.nominalBounds = new cjs.Rectangle(-65.4,-36.4,131,73);
 		that.add_alpha.addEventListener("click", addalfa);
 		
 		
-		function addalfa() {
+		function addalfa(ev) {
 		
-		
+		if (ev.nativeEvent instanceof MouseEvent) {
 			clicked = !clicked;
 		
 			if (clicked) {
@@ -4199,7 +4199,7 @@ p.nominalBounds = new cjs.Rectangle(-65.4,-36.4,131,73);
 		
 			}
 		
-		
+		}
 		}
 	}
 

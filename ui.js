@@ -7575,28 +7575,31 @@ p.nominalBounds = new cjs.Rectangle(-112.8,-220.7,189.6,283.59999999999997);
 		changePage(currentPage);
 		
 		
-		function toPrv() {
-		
+		function toPrv(ev) {
+		if (ev.nativeEvent instanceof MouseEvent) {
+
+
 			currentPage -= 2;
 		
 			changePage(currentPage);
 		
 			console.log(currentPage);
 		}
+		}
 		
 		
 		
+		function toNx(ev) {
 		
-		function toNx() {
-		
-		
+		if (ev.nativeEvent instanceof MouseEvent) {
+
 			currentPage += 2;
 		
 			changePage(currentPage);
 		
 			console.log(currentPage);
 		}
-		
+		}
 		
 		function startDrag() {
 		
@@ -7772,19 +7775,24 @@ p.nominalBounds = new cjs.Rectangle(-112.8,-220.7,189.6,283.59999999999997);
 		}
 		
 		
-		function toHome(e) {
+		function toHome(ev) {
 		
-		
+		if (ev.nativeEvent instanceof MouseEvent) {
+
+
 			currentPage = 0;
 		
 			changePage(currentPage);
 		}
 		
-		
+		}
 		
 		
 		function goPage(e) {
 		
+			if (e.nativeEvent instanceof MouseEvent) {
+
+
 			var inputValue = parseInt(that.pageNum.value);
 		
 		
@@ -7800,17 +7808,20 @@ p.nominalBounds = new cjs.Rectangle(-112.8,-220.7,189.6,283.59999999999997);
 			changePage(currentPage);
 		
 		}
-		
+		}
 		
 		function toBook(e) {
 		
+			if (e.nativeEvent instanceof MouseEvent) {
+
+
 			e.currentTarget.gotoAndPlay(1);
 		
 			clearTmrn();
 		
 			chafaf.mouseEnabled = true;
 		
-		
+			}
 		}
 		
 		

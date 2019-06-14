@@ -9938,7 +9938,7 @@ p.nominalBounds = new cjs.Rectangle(0,-7.4,32.3,45);
 			initTextStyle();
 		
 		
-		}, 0);
+		}, 500);
 		
 		function initTextStyle() {
 		

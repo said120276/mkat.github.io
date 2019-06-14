@@ -10015,7 +10015,7 @@ p.nominalBounds = new cjs.Rectangle(0,-7.4,32.3,45);
 		
 			//bmp.cache(0, 0, image.width, image.height, 500 / (image.height + 100));
 		
-			bmp.cache(0, 0, image.width, image.height, 0.5);
+		///	bmp.cache(0, 0, image.width, image.height, 0.5);
 		
 			// Create a new scaled version
 			//var bmp = new createjs.Bitmap(bmp.cacheCanvas);

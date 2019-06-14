@@ -10054,7 +10054,7 @@ p.nominalBounds = new cjs.Rectangle(0,-7.4,32.3,45);
 			
 		}
 		
-		    bmp.scaleX = scalx;
+		       bmp.scaleX = scalx;
 			bmp.scaleY = scaly;
 		
 			

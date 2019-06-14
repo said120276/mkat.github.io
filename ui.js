@@ -10081,7 +10081,7 @@ p.nominalBounds = new cjs.Rectangle(0,-7.4,32.3,45);
 			//cont.removeAllChildren();
 		
 		
-			alert("changePage : " + file);
+			//alert("changePage : " + file);
 			queue.loadFile({
 				src: "pages/" + file + ".jpg",
 				id: "image"

@@ -10026,11 +10026,10 @@ p.nominalBounds = new cjs.Rectangle(0,-7.4,32.3,45);
 			that.tool_blok.visible = false;
 			that.tool_tmrn.visible = false;
 		
-		alert("firstwidth 0 " +firstwidth);
+		
 		
 		if(firstwidth == 0){
 			
-			alert("firstwidth 1 " +firstwidth);
 		
 			scalx = (500 / (image.height + 100)) ;
 			scaly = (500 / (image.height + 900))  ;
@@ -10091,7 +10090,7 @@ p.nominalBounds = new cjs.Rectangle(0,-7.4,32.3,45);
 		
 		
 		}
-		alert("firstwidth 2 " +firstwidth);
+		
 		changePage(currentPage);
 		
 		

@@ -10015,7 +10015,7 @@ p.nominalBounds = new cjs.Rectangle(0,-7.4,32.3,45);
 		
 			//bmp.cache(0, 0, image.width, image.height, 500 / (image.height + 100));
 		
-		///	bmp.cache(0, 0, image.width, image.height, 0.5);
+			bmp.cache(0, 0, image.width, image.height, 0.5);
 		
 			// Create a new scaled version
 			//var bmp = new createjs.Bitmap(bmp.cacheCanvas);
@@ -10025,24 +10025,24 @@ p.nominalBounds = new cjs.Rectangle(0,-7.4,32.3,45);
 			var scaly = (500 / (image.height + 900));
 		
 		
-		///	bmp.scaleX = scalx;
-		///	bmp.scaleY = scaly;
+			bmp.scaleX = scalx;
+			bmp.scaleY = scaly;
 		
 			firstwidth = image.width * scalx;
 			firstheight = image.height * scaly;
 		
 		
 		
-		///	cont.x = (firstwidth / 2) + offsetX;
-		///	cont.y = (firstheight / 2) + offsetY;
+		cont.x = (firstwidth / 2) + offsetX;
+		cont.y = (firstheight / 2) + offsetY;
 		
 		
 			cont.origin_regX = firstwidth / 2;
 			cont.origin_regY = firstheight / 2;
 		
 		
-	  ///	cont.regX = cont.origin_regX;
-		///	cont.regY = cont.origin_regY;
+	        	cont.regX = cont.origin_regX;
+			cont.regY = cont.origin_regY;
 		
 		
 			that.tool_blok.visible = false;

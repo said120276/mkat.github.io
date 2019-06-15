@@ -8223,8 +8223,10 @@ p.nominalBounds = new cjs.Rectangle(-22.9,-22.1,110.5,44.5);
 		function kom(eve) {
 		
 		
-			if (!eve.nativeEvent instanceof MouseEvent) return;
-		
+			if (!eve.nativeEvent instanceof MouseEvent) {
+				eve.stopImmediatePropagation();
+				return;
+			}
 			alert("this.qalam.addEventListener");
 		
 			that.isErase = false;

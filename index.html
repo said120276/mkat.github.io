@@ -20,9 +20,60 @@
 	left:0;right:0;
 	top:0;bottom:0;
   }
+  body {
+	
+	/* to add color to backgroun */
+	
+	    background-color: teal;
+		
+		
+  /* Disables pull-to-refresh but allows overscroll glow effects. */
+  overscroll-behavior-y: contain;
+}
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+position: relative;  
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+
+/* Style buttons */
+.btn {
+position: absolute;
+    top:  2px;
+    right: 10px;
+	 bottom: 2px;
+  background-color: #2196F3; /*DodgerBlue  Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 6px 10px; /* Some padding */
+  font-size: 14px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
 </style>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="ui.js?1560626803573"></script>
+<script src="ui.js?1560365149663"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -104,12 +155,33 @@ function handleComplete(evt,comp) {
 </script>
 <!-- write your code here -->
 </head>
-<body onload="init();" style="margin:0px;">
+<body onload="init();" style="margin:0px; overflow: hidden">
 	<div id="animation_container" style="background-color:rgba(204, 204, 204, 1.00); width:800px; height:500px">
+		
+		<!-- Draggable DIV -->
+   <div id="mydiv"  style="display: none; >
+      <!-- Include a header DIV with the same name as the draggable DIV, followed by "header"  style="display: none;" -->
+      <div id="mydivheader"  >  إسحب هنا لتحريك النافذة 
+	  
+    		<!-- <button id = "remove" type="button " >Delete</button> Click here to move-->
+	  
+	       <button id = "remove" class="btn"><i class="fa fa-close"></i> Close</button>
+	  
+	  
+	  </div>
+           <video id = "vi" controls width="450" >
+              
+           Sorry, your browser doesn't support embedded videos.
+		   
+          </video>
+   </div>
+		
+		
+		
 		<canvas id="canvas" width="800" height="500" style="position: absolute; display: none; background-color:rgba(204, 204, 204, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:800px; height:500px; position: absolute; left: 0px; top: 0px; display: none;">
 		</div>
 	</div>
-    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:500px; width: 800px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif?1560626803574 style='vertical-align: middle; max-height: 100%'/></div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:500px; width: 800px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif?1559665529553 style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>

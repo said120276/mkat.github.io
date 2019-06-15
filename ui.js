@@ -8263,10 +8263,10 @@ p.nominalBounds = new cjs.Rectangle(-22.9,-22.1,110.5,44.5);
 		}
 		
 		function toSquare(eve) {
-
+alert("square");
 	if (eve.nativeEvent instanceof MouseEvent) {
 
-alert("square");
+
 		that.qalam.gotoAndStop(that.currentcolor);
 		that.mimsaha.gotoAndStop(1);
 		that.somkmc.gotoAndStop(that.currentsomk);

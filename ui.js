@@ -8263,21 +8263,21 @@ p.nominalBounds = new cjs.Rectangle(-22.9,-22.1,110.5,44.5);
 		}
 		
 		function toSquare(eve) {
-		
-			if (!eve.nativeEvent instanceof MouseEvent) return;
-		
-		
-			that.qalam.gotoAndStop(that.currentcolor);
-			that.mimsaha.gotoAndStop(1);
-			that.somkmc.gotoAndStop(that.currentsomk);
-		
-			that.drawSquare = !that.drawSquare;
-		
-			that.drawCircle = false;
-		
-			that.setChildIndex(eve.currentTarget, that.numChildren - 1);
-		}
-		
+
+	if (eve.nativeEvent instanceof MouseEvent) {
+
+alert("square");
+		that.qalam.gotoAndStop(that.currentcolor);
+		that.mimsaha.gotoAndStop(1);
+		that.somkmc.gotoAndStop(that.currentsomk);
+
+		that.drawSquare = !that.drawSquare;
+
+		that.drawCircle = false;
+
+		that.setChildIndex(eve.currentTarget, that.numChildren - 1);
+	}
+}
 		function toCircle(eve) {
 		
 			if (!eve.nativeEvent instanceof MouseEvent) return;

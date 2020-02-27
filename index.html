@@ -105,7 +105,12 @@ function handleComplete(evt,comp) {
 			lastW = iw; lastH = ih; lastS = sRatio;            
 			stage.tickOnUpdate = false;            
 			stage.update();            
-			stage.tickOnUpdate = true;		
+			stage.tickOnUpdate = true;	
+			
+			pageNum = document.getElementById("dom_overlay_container");
+			pageNum.style.color = '#000000';
+			pageNum.style.fontSize = "24px";
+			pageNum.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";
 		}
 	}
 	makeResponsive(true,'both',true,1);	

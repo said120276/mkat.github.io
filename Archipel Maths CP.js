@@ -18283,7 +18283,7 @@ p.nominalBounds = new cjs.Rectangle(-29.5,-28.3,59.8,57.400000000000006);
 		
 			that.pageNum = document.getElementById("pageNum");
 			that.pageNum.style.color = '#000000';
-			that.pageNum.style.fontSize = "24px";
+			that.pageNum.style.fontSize = font_size;
 			that.pageNum.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";
 		
 			//that.pageNum.maxLength = 3;

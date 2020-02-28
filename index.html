@@ -34,7 +34,7 @@
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <script src="Archipel Maths CP.js?1581611591028"></script>
 <script>
-var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation ,font_size;
 function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
@@ -102,16 +102,27 @@ function handleComplete(evt,comp) {
 			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = preloaderDiv.style.height = h*sRatio+'px';
 			stage.scaleX = pRatio*sRatio;			
 			stage.scaleY = pRatio*sRatio;			
-			lastW = iw; lastH = ih; lastS = sRatio;            
-			stage.tickOnUpdate = false;            
+			lastW = iw; lastH = ih; lastS = sRatio; 
+			
+			TextStyle(sRatio ,pRatio, h) ;
+			stage.tickOnUpdate = false;  
+			
 			stage.update();            
 			stage.tickOnUpdate = true;	
 			
-			pageNum = document.getElementById("dom_overlay_container");
-			pageNum.style.color = '#000000';
-			pageNum.style.fontSize = "24px";
-			pageNum.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";
+		
 		}
+		function TextStyle(sRatio ,pRatio, h) {
+		
+		 font_size = ( h*pRatio*sRatio*(0.025) ).toString()+'px';
+		
+		var nodes =document.getElementsByTagName("input");
+        for (var i=0; i<nodes.length; i++){
+
+                  nodes[i].style.fontSize = font_size;
+        }
+		   
+			}
 	}
 	makeResponsive(true,'both',true,1);	
 	AdobeAn.compositionLoaded(lib.properties.id);

@@ -26,17 +26,16 @@
 	/* to add color to backgroun */
 	
 	    background-color: teal;
-	overflow : hidden ;	
+		overflow : hidden ;
 		
   /* Disables pull-to-refresh but allows overscroll glow effects. */
   overscroll-behavior-y: contain;
 }
-
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="Archipel  Maths CP.js?1583650416532"></script>
+<script src="Archipel  Maths CP.js?1583825840098"></script>
 <script>
-var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation , font_size;
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation ,font_size;
 function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
@@ -105,7 +104,7 @@ function handleComplete(evt,comp) {
 			stage.scaleX = pRatio*sRatio;			
 			stage.scaleY = pRatio*sRatio;			
 			lastW = iw; lastH = ih; lastS = sRatio; 
-           TextStyle(sRatio ,pRatio, h)			
+             TextStyle(sRatio ,pRatio, h)			
 			stage.tickOnUpdate = false;            
 			stage.update();            
 			stage.tickOnUpdate = true;		
@@ -138,6 +137,6 @@ function playSound(id, loop) {
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:800px; height:500px; position: absolute; left: 0px; top: 0px; display: none;">
 		</div>
 	</div>
-    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:500px; width: 800px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif?1583650416533 style='vertical-align: middle; max-height: 100%'/></div>
+    <div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:500px; width: 800px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images/_preloader.gif?1583825840099 style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>

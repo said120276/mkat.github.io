@@ -21435,22 +21435,57 @@ p.nominalBounds = new cjs.Rectangle(-1.7,0,2325.2999999999997,1635.5);
 			}
 		
 		
-		
+		var currentHitString_sil = null;
+	var currentHit_sil = null;
+	function checkHit_sil(pt) {
+
+		var rect = {
+
+			x: pt.x,
+			y: pt.y,
+		}
+
+
+		for (var u = 0; u < linkArray.length; u++) {
+
+
+
+			var rect2 = linkArray[u];
+
+			if ((Math.abs(rect.x - rect2.x) < rect2.getBounds().width / 2) && Math.abs(rect.y - rect2.y) < (rect2.getBounds().height / 2)) {
+
+
+				currentHitString_sil = rect2.name;
+				alert(currentHitString_sil);
+				currentHit_sil = rect2;
+				return true;
+			}
+		}
+
+
+		return false;
+	}
+
 			function onup(ev) {
 		
 				console.log('up');
 				that.removeEventListener("pressmove", onpressmove_sil);
 		
 				that.shapeDraw.graphics.clear();
-				that.shapeDraw.updateCache();
-		
-				//Before we reacting on mouse-up event we need to check if previuos down event is on an accepted mc 
-		
-				if (overObject != null && downOnAcceptedMc && ismove) {
-		
-					ismove = false;
-		
-					mmc = overObject;
+		that.shapeDraw.updateCache();
+
+
+		checkHit_sil(sbr.globalToLocal(ev.stageX, ev.stageY));
+
+
+
+		//Before we reacting on mouse-up event we need to check if previuos down event is on an accepted mc 
+
+		if ((overObject || currentHit_sil) != null && downOnAcceptedMc && ismove) {
+
+			ismove = false;
+			overObject = currentHit_sil;
+			mmc = overObject;
 		
 					var currentUpMc = mmc.name;
 		

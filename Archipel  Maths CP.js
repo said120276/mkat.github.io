@@ -21481,7 +21481,7 @@ p.nominalBounds = new cjs.Rectangle(-1.7,0,2325.2999999999997,1635.5);
 
 		//Before we reacting on mouse-up event we need to check if previuos down event is on an accepted mc 
 
-		if ((overObject || currentHit_sil) != null && downOnAcceptedMc && ismove) {
+		if (( currentHit_sil) != null && downOnAcceptedMc && ismove) {
 
 			ismove = false;
 			overObject = currentHit_sil;
@@ -21518,7 +21518,7 @@ p.nominalBounds = new cjs.Rectangle(-1.7,0,2325.2999999999997,1635.5);
 				}
 		
 				downOnAcceptedMc = false;
-		
+		                currentHit_sil = null ;
 			}
 		
 		
@@ -21534,7 +21534,7 @@ p.nominalBounds = new cjs.Rectangle(-1.7,0,2325.2999999999997,1635.5);
 			function onout(evt) {
 		
 				overObject = null;
-		
+		                 currentHit_sil = null ;          
 			}
 			function ondown(ev) {
 		

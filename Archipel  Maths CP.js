@@ -21435,7 +21435,7 @@ p.nominalBounds = new cjs.Rectangle(-1.7,0,2325.2999999999997,1635.5);
 			}
 		
 		
-		var currentHitString_sil = null;
+	
 	var currentHit_sil = null;
 	function checkHit_sil(pt) {
 
@@ -21455,8 +21455,7 @@ p.nominalBounds = new cjs.Rectangle(-1.7,0,2325.2999999999997,1635.5);
 			if ((Math.abs(rect.x - rect2.x) < rect2.getBounds().width / 2) && Math.abs(rect.y - rect2.y) < (rect2.getBounds().height / 2)) {
 
 
-				currentHitString_sil = rect2.name;
-				alert(currentHitString_sil);
+		
 				currentHit_sil = rect2;
 				return true;
 			}
@@ -21468,10 +21467,10 @@ p.nominalBounds = new cjs.Rectangle(-1.7,0,2325.2999999999997,1635.5);
 
 			function onup(ev) {
 		
-				console.log('up');
-				that.removeEventListener("pressmove", onpressmove_sil);
+				
+		that.removeEventListener("pressmove", onpressmove_sil);
 		
-				that.shapeDraw.graphics.clear();
+		that.shapeDraw.graphics.clear();
 		that.shapeDraw.updateCache();
 
 

@@ -8252,10 +8252,7 @@ p.nominalBounds = new cjs.Rectangle(-113.4,-133.8,324.5,324.4);
     // stop touch event
     e.stopPropagation();
     e.preventDefault();});
-		this.addEventListener('touchcancel', function (e) {
-    // stop touch event
-    e.stopPropagation();
-    e.preventDefault();});
+		
 		function toMimsaha(evt) {
 		
 			mimsaha_isclicked = !mimsaha_isclicked;
@@ -8420,10 +8417,7 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21.4,83.5,39.8);
     // stop touch event
     e.stopPropagation();
     e.preventDefault();});
-		this.addEventListener('touchcancel', function (e) {
-    // stop touch event
-    e.stopPropagation();
-    e.preventDefault();});
+		
 		function choose(evt) {
 			
 			if ( ! evt.nativeEvent instanceof MouseEvent){ return ;}

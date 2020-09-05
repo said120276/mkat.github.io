@@ -9608,7 +9608,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		function kom(eve) { //qalam
 		
 		
-		if (eve.nativeEvent instanceof MouseEvent) {
+		if ( eve !== null && eve.nativeEvent instanceof MouseEvent) {
 		alert('first is clicked');
 		//eve.nativeEvent.preventDefault();
 		eve.stopPropagation() ;
@@ -9668,7 +9668,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		function toSquare(eve) {
 		
 			if (eve.nativeEvent instanceof MouseEvent) {
-		
+		                eve.stopPropagation() ;
 			eve.currentTarget.bkg.alpha = 1;
 			that.qalam.bkg.alpha = 0.6;
 			that.mimsaha.bkg.alpha = 0.6;

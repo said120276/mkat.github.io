@@ -9592,7 +9592,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 				return;
 			}
 		
-		eve.nativeEvent.preventDefault();
+		//eve.nativeEvent.preventDefault();
 		eve.stopPropagation() ;
 			that.isErase = false;
 		

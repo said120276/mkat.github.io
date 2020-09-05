@@ -9587,7 +9587,10 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		function kom(eve) { //qalam
 		
 		
-			if (eve !== null && !eve.nativeEvent instanceof MouseEvent) return;
+			if (eve !== null || !eve.nativeEvent instanceof MouseEvent){
+				alert(eve);
+				return;
+			}
 		
 		
 		
@@ -9611,8 +9614,10 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		that.kom = kom;
 		function kom1(eve) { //mimsaha
 		
-			if (!eve.nativeEvent instanceof MouseEvent) return;
-		
+			if (!eve.nativeEvent instanceof MouseEvent) {
+				alert(eve);
+				return;
+			}
 		
 			that.isErase = true;
 		

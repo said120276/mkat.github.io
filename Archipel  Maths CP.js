@@ -8408,7 +8408,9 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21.4,83.5,39.8);
 		
 		function choose(evt) {
 			
-			if ( ! evt.instanceof MouseEvent){alert('inside'+evt);
+			if ( ! evt.instanceof MouseEvent){
+				alert('inside');
+				alert(evt);
 							  return ;}
 			alert(evt);
 			alert(evt.type);

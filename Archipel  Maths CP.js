@@ -8396,13 +8396,15 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21.4,83.5,39.8);
 		this.addEventListener('touchstart', function (e) {
     // stop touch event
     e.stopPropagation();
-    e.preventDefault();}this.addEventListener('touchmove', function (e) {
+    e.preventDefault();});
+		this.addEventListener('touchmove', function (e) {
     // stop touch event
     e.stopPropagation();
-    e.preventDefault();}this.addEventListener('touchend', function (e) {
+    e.preventDefault();});
+		this.addEventListener('touchend', function (e) {
     // stop touch event
     e.stopPropagation();
-    e.preventDefault();}
+    e.preventDefault();});
 		function choose(evt) {
 			
 			if ( ! evt.nativeEvent instanceof MouseEvent){ return ;}

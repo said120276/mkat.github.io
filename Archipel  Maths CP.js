@@ -9618,7 +9618,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 				alert(eve);
 				return;
 			}
-		
+		eve.stopPropagation() ;
 			that.isErase = true;
 		
 			that.drawCircle = false;
@@ -9643,7 +9643,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 			//that.drawCircle = false;
 			//that.drawSquare = false;
-		
+		eve.stopPropagation() ;
 			that.qalam.gotoAndStop(that.currentcolor);
 			that.mimsaha.gotoAndStop(that.mimsaha.currentFrame < 3 ? that.mimsaha.currentFrame : 1);
 		
@@ -9676,7 +9676,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		function toCircle(eve) {
 		
 			if (!eve.nativeEvent instanceof MouseEvent) return;
-		
+		eve.stopPropagation() ;
 			eve.currentTarget.bkg.alpha = 1;
 			that.qalam.bkg.alpha = 0.6;
 			that.mimsaha.bkg.alpha = 0.6;
@@ -9698,7 +9698,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 		
 			eve.stopImmediatePropagation();
-		
+		eve.stopPropagation() ;
 			if (eve.nativeEvent instanceof MouseEvent) {
 		
 		

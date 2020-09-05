@@ -8240,18 +8240,6 @@ p.nominalBounds = new cjs.Rectangle(-113.4,-133.8,324.5,324.4);
 		
 		
 		this.addEventListener("click", toMimsaha);
-		this.addEventListener('touchstart', function (e) {
-    // stop touch event
-    e.stopPropagation();
-    e.preventDefault();});
-		this.addEventListener('touchmove', function (e) {
-    // stop touch event
-    e.stopPropagation();
-    e.preventDefault();});
-		this.addEventListener('touchend', function (e) {
-    // stop touch event
-    e.stopPropagation();
-    e.preventDefault();});
 		
 		function toMimsaha(evt) {
 		

@@ -9608,10 +9608,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		function kom(eve) { //qalam
 		
 		
-			if (eve !== null && !eve.nativeEvent instanceof MouseEvent){
-				alert(eve);
-				return;
-			}
+		if (eve.nativeEvent instanceof MouseEvent) {
 		alert('first is clicked');
 		//eve.nativeEvent.preventDefault();
 		eve.stopPropagation() ;
@@ -9631,14 +9628,11 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 			that.setChildIndex(that.qalam, that.numChildren - 1);
 		}
-		
+		}
 		that.kom = kom;
 		function kom1(eve) { //mimsaha
 		
-			if (!eve.nativeEvent instanceof MouseEvent) {
-				alert(eve);
-				return;
-			}
+		if (eve.nativeEvent instanceof MouseEvent) {
 		eve.stopPropagation() ;
 			that.isErase = true;
 		
@@ -9655,12 +9649,12 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 			that.setChildIndex(eve.currentTarget, that.numChildren - 1);
 		}
-		
+		}
 		
 		
 		function kom2(eve) { //somk
 		
-			if (!eve.nativeEvent instanceof MouseEvent) return;
+		if (eve.nativeEvent instanceof MouseEvent) {
 		
 			//that.drawCircle = false;
 			//that.drawSquare = false;
@@ -9670,11 +9664,10 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 			that.setChildIndex(eve.currentTarget, that.numChildren - 1);
 		}
-		
+		}
 		function toSquare(eve) {
 		
-			if (!eve.nativeEvent instanceof MouseEvent) return;
-		
+			if (eve.nativeEvent instanceof MouseEvent) {
 		
 			eve.currentTarget.bkg.alpha = 1;
 			that.qalam.bkg.alpha = 0.6;
@@ -9693,10 +9686,10 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 			that.setChildIndex(eve.currentTarget, that.numChildren - 1);
 		}
-		
+		}
 		function toCircle(eve) {
 		
-			if (!eve.nativeEvent instanceof MouseEvent) return;
+		if (eve.nativeEvent instanceof MouseEvent) {
 		eve.stopPropagation() ;
 			eve.currentTarget.bkg.alpha = 1;
 			that.qalam.bkg.alpha = 0.6;
@@ -9713,7 +9706,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 			that.setChildIndex(eve.currentTarget, that.numChildren - 1);
 		}
-		
+		}
 		function kom3(eve) {
 		
 		

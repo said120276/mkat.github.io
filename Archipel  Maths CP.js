@@ -8411,11 +8411,8 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21.4,83.5,39.8);
     e.preventDefault();});
 		
 		function choose(evt) {
-			
-			if ( ! evt instanceof MouseEvent){
-				alert('inside');
-				alert(evt);
-							  return ;}
+			if (evt.nativeEvent instanceof MouseEvent) {
+
 			alert(evt);
 			alert(evt.type);
 			alert('second is clicked');
@@ -8428,7 +8425,7 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21.4,83.5,39.8);
 				evt.currentTarget.gotoAndStop(that.parent.currentcolor);
 				
 		}	// that .removeEventListener("click" , choose);
-				
+			}		
 		
 		
 		
@@ -9207,7 +9204,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 				oldX = 0, oldY = 0, pt = 0, cursor = 0;
 		
-				//that.qalam.addEventListener("click", kom);
+				that.qalam.addEventListener("click", kom);
 				that.mimsaha.addEventListener("click", kom1);
 				that.somkmc.addEventListener("click", kom2);
 				that.qlamv.addEventListener("click", kom3);

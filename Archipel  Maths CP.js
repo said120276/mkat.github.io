@@ -8415,9 +8415,7 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21.4,83.5,39.8);
 		function choose(evt) {
 			if (evt.nativeEvent instanceof MouseEvent) {
 
-			alert(evt);
-			alert(evt.type);
-			alert('second is clicked');
+			
 			//evt.stopImmediatePropagation();
 			qalamisclicked = !qalamisclicked;
 			if (qalamisclicked) {
@@ -9609,7 +9607,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		
 		
 		if ( eve !== null && eve.nativeEvent instanceof MouseEvent) {
-		alert('first is clicked');
+		
 		//eve.nativeEvent.preventDefault();
 		eve.stopPropagation() ;
 			that.isErase = false;

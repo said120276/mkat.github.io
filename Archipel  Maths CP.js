@@ -8398,7 +8398,7 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21.4,83.5,39.8);
 			
 			if ( ! evt.nativeEvent instanceof MouseEvent){ return ;}
 			alert('second is clicked');
-			evt.stopImmediatePropagation();
+			//evt.stopImmediatePropagation();
 			qalamisclicked = !qalamisclicked;
 			if (qalamisclicked) {
 				evt.currentTarget.gotoAndStop(6);

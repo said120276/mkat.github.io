@@ -9587,13 +9587,13 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 		function kom(eve) { //qalam
 		
 		
-			if (eve !== null || !eve.nativeEvent instanceof MouseEvent){
+			if (eve !== null && !eve.nativeEvent instanceof MouseEvent){
 				alert(eve);
 				return;
 			}
 		
-		
-		
+		eve.nativeEvent.preventDefault();
+		eve.stopPropagation() ;
 			that.isErase = false;
 		
 			that.qalam.bkg.alpha = 1;

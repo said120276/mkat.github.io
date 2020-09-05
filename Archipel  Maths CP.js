@@ -8243,11 +8243,13 @@ p.nominalBounds = new cjs.Rectangle(-113.4,-133.8,324.5,324.4);
 		
 		function toMimsaha(evt) {
 		
+			if (evt.nativeEvent instanceof MouseEvent) {
 			mimsaha_isclicked = !mimsaha_isclicked;
 			if (mimsaha_isclicked) {
 				evt.currentTarget.gotoAndStop(3);
 			} else {
 				evt.currentTarget.gotoAndStop(1);
+			}
 			}
 		}
 	}
@@ -8713,7 +8715,7 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21,116.80000000000001,42.1);
 		var somk_is_clicked = false ;
 		
 		function chosSomk(evt) {
-		
+		if (evt.nativeEvent instanceof MouseEvent) {
 			somk_is_clicked = !somk_is_clicked;
 			if (somk_is_clicked) {
 				evt.currentTarget.gotoAndStop(4);
@@ -8721,7 +8723,7 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21,116.80000000000001,42.1);
 			} else {
 				evt.currentTarget.gotoAndStop(that.parent.currentsomk);
 			}
-		
+		}
 		}
 	}
 	this.frame_4 = function() {

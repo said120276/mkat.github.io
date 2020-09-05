@@ -8397,7 +8397,7 @@ p.nominalBounds = new cjs.Rectangle(-24.9,-21.4,83.5,39.8);
 		function choose(evt) {
 			
 			if ( ! evt.nativeEvent instanceof MouseEvent){ return ;}
-			
+			alert('second is clicked');
 			qalamisclicked = !qalamisclicked;
 			if (qalamisclicked) {
 				evt.currentTarget.gotoAndStop(6);
@@ -9591,7 +9591,7 @@ p.nominalBounds = new cjs.Rectangle(78.3,-114.7,248.5,300.3);
 				alert(eve);
 				return;
 			}
-		
+		eve.stopImmediatePropagation();
 		//eve.nativeEvent.preventDefault();
 		eve.stopPropagation() ;
 			that.isErase = false;
